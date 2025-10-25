@@ -141,14 +141,24 @@
     }
 
     /* 矩形 6 */
-     .rect-6 {
-        width: 100%;
-        height: 600px;
-        background: rgba(255, 107, 53, 1);
-        margin-bottom: 200px; /* 与下方图片间距为200 */
-      }
+      .rect-6 {
+         width: 100%;
+         height: 600px;
+         background: rgba(255, 107, 53, 1);
+         margin-bottom: 200px; /* 与下方图片间距为200 */
+       }
 
-    /* 页脚样式 */
+      /* 白色覆盖矩形（矩形 7）：进入视口后吸顶并覆盖首屏与欢迎文字 */
+      .rect-7 {
+        position: sticky;
+        top: 0;
+        z-index: 950; /* 高于欢迎文字(900)，低于导航(1000) */
+        width: 100%;
+        min-height: 100vh;
+        background: #ffffff;
+      }
+ 
+      /* 页脚样式 */
     .footer {
       width: 100%;
       padding: 20px 100px;
@@ -386,6 +396,8 @@
       <div class="welcome-text">欢迎来到峰岚佳韵</div>
     </div>
   </div>
+
+  <div class="rect-7"></div>
 
   <div class="images-container">
     <div class="image-item image-1"></div>
