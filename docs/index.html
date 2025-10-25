@@ -76,6 +76,7 @@
       gap: 8px;
       justify-content: flex-start;
       align-items: center;
+      cursor: pointer; /* 提示Logo可点击 */
     }
 
     .logo-icon {
@@ -180,6 +181,8 @@
         width: 100%;
         min-height: 100vh; /* 保证至少铺满视口高度 */
         overflow-x: hidden; /* 防溢出 */
+        display: flex; /* 使页脚可通过自适应推到底部 */
+        flex-direction: column;
       }
  
       /* 页脚样式 */
@@ -192,6 +195,7 @@
       background-color: #FF6B35; /* 页脚背景色 */
       color: #ffffff; /* 页脚文字色 */
       border-top: none;
+      margin-top: auto; /* 将页脚推至主内容底部 */
     }
 
     .footer-content {
@@ -465,6 +469,14 @@
     document.addEventListener('DOMContentLoaded', function() {
       // 禁用鼠标右键菜单
       document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+      // 点击 Logo 回到页面顶部
+      const logo = document.querySelector('.logo-container');
+      if (logo) {
+        logo.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
 
       updateNavbarOnScroll();
       window.addEventListener('scroll', updateNavbarOnScroll, { passive: true });
