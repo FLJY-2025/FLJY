@@ -175,8 +175,9 @@
       width: 100%;
       padding: 20px 100px;
       padding-bottom: calc(20px + env(safe-area-inset-bottom));
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
-      color: inherit;
+      background-color: #FF6B35; /* 页脚背景色 */
+      color: #ffffff; /* 页脚文字色 */
+      border-top: none;
     }
 
     .footer-content {
@@ -190,13 +191,14 @@
     }
 
     .light-bg .footer {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      background-color: #FF6B35;
+      border-top: none;
+      color: #ffffff;
     }
 
     .dark-bg .footer {
-      background-color: rgba(0, 0, 0, 0.9);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      background-color: #FF6B35;
+      border-top: none;
       color: #ffffff;
     }
 
@@ -431,19 +433,18 @@
     function updateNavbarOnScroll() {
       const body = document.body;
       const navbar = document.querySelector('.navbar');
-      const hero = document.querySelector('.rect-6');
-      if (!navbar || !hero) return;
+      const rect7 = document.querySelector('.rect-7');
+      if (!navbar || !rect7) return;
 
-      const navbarHeight = navbar.offsetHeight;
-      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      const rect7Top = rect7.getBoundingClientRect().top;
       
-      // 当导航栏仍位于矩形6区域内时，使用深色状态（反白稿）
-      if (window.scrollY + navbarHeight < heroBottom) {
-        body.classList.add('dark-bg');
-        body.classList.remove('light-bg');
-      } else {
+      // 当白色矩形到达导航栏上方（贴顶）时，切换为白底导航与彩色logo；反之为透明导航与反白logo
+      if (rect7Top <= 0) {
         body.classList.add('light-bg');
         body.classList.remove('dark-bg');
+      } else {
+        body.classList.add('dark-bg');
+        body.classList.remove('light-bg');
       }
     }
 
