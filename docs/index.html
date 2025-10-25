@@ -20,7 +20,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      background-color: rgba(255, 107, 53, 1); /* 全局背景采用矩形6的颜色 */
       color: #000000;
     }
 
@@ -44,10 +44,11 @@
       border-bottom: none; /* 去掉分割线 */
     }
 
-    /* 浅色背景状态（用于矩形下方） */
+    /* 浅色/非纯色背景状态（包括白色）：导航白底不透明、彩色logo */
     .light-bg .navbar {
-      background-color: transparent;
-      box-shadow: none;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: saturate(180%) blur(10px);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
       border-bottom: none;
     }
 
@@ -158,6 +159,13 @@
         width: 100%;
         min-height: 100vh;
         background: #ffffff;
+      }
+
+      /* 主内容统一包裹容器：置于白层之上 */
+      .main-content {
+        position: relative;
+        z-index: 980; /* 高于白层，低于导航 */
+        background: transparent;
       }
  
       /* 页脚样式 */
@@ -403,16 +411,18 @@
 
   <div class="rect-7"></div>
 
-  <div class="images-container">
-    <div class="image-item image-1"></div>
-    <div class="image-item image-2"></div>
-    <div class="image-item image-3"></div>
-  </div>
+  <div class="main-content">
+    <div class="images-container">
+      <div class="image-item image-1"></div>
+      <div class="image-item image-2"></div>
+      <div class="image-item image-3"></div>
+    </div>
 
-  <div class="footer">
-    <div class="footer-content">
-      <span>© 2025 峰岚佳韵</span>
-      <span>保留所有权利</span>
+    <div class="footer">
+      <div class="footer-content">
+        <span>© 2025 峰岚佳韵</span>
+        <span>保留所有权利</span>
+      </div>
     </div>
   </div>
 
