@@ -23,20 +23,19 @@
 ## 文件结构
 
 ```
-├── docs/                 # GitHub Pages部署目录
-│   ├── css/              # 样式文件
-│   ├── font/             # 字体文件
-│   ├── image/            # 图片资源
-│   ├── index.html        # 主页面
-│   ├── test.html         # 测试页面
-│   ├── 彩色稿.svg         # 彩色logo
-│   └── 反白稿.svg         # 反白logo
-├── README.md             # 项目说明文件
+├── css/                 # 样式文件
+├── font/                # 字体文件
+├── image/               # 图片资源
+├── index.html           # 主页面
+├── test.html            # 测试页面
+├── 彩色稿.svg            # 彩色logo
+├── 反白稿.svg            # 反白logo
+├── CNAME                # 自定义域名配置
 ```
 
 ## 访问地址
 
-- GitHub Pages: https://[your-username].github.io/[repository-name]
+- GitHub Pages: https://FLJY-2025.github.io/FLJY/
 - 自定义域名: http://www.fljytrain.cn
 
 ## 联系方式
