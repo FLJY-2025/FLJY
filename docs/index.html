@@ -36,6 +36,7 @@
       justify-content: flex-start;
       align-items: center;
       padding: 10px 100px;
+      padding-top: env(safe-area-inset-top);
       background-color: rgba(0, 0, 0, 0.9); /* 默认使用深色背景 */
       backdrop-filter: blur(10px);
       z-index: 1000;
@@ -94,18 +95,20 @@
     .welcome-container {
       padding: 200px 100px 100px 100px;
       text-align: left;
-      margin-top: 100px; /* 为固定导航栏留出空间 */
+      margin-top: calc(100px + env(safe-area-inset-top)); /* 为固定导航栏留出空间 */
     }
 
     .hello-text {
       font-size: 64px;
       font-weight: 700;
+      line-height: 1.2;
       margin-bottom: 20px;
     }
 
     .welcome-text {
       font-size: 64px;
       font-weight: 700;
+      line-height: 1.2;
       margin-bottom: 100px;
     }
 
@@ -120,7 +123,8 @@
     .image-item {
       width: 400px;
       height: 500px;
-      background-size: 100% 100%;
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
     }
 
@@ -168,7 +172,8 @@
     @media screen and (max-width: 768px) {
       .navbar {
         padding: 10px 20px;
-        height: 50px;
+        height: 64px;
+        padding-top: calc(10px + env(safe-area-inset-top));
       }
       
       .logo-container {
@@ -186,8 +191,8 @@
       }
       
       .welcome-container {
-        padding: 120px 20px 60px 20px;
-        margin-top: 50px;
+        padding: 100px 20px 60px 20px;
+        margin-top: calc(64px + env(safe-area-inset-top));
         text-align: center;
       }
       
@@ -210,8 +215,8 @@
       
       .image-item {
         width: 100%;
-        max-width: 300px;
-        height: 350px;
+        max-width: 360px;
+        height: 280px;
       }
     }
 
@@ -219,7 +224,8 @@
     @media screen and (max-width: 480px) {
       .navbar {
         padding: 8px 15px;
-        height: 45px;
+        height: 56px;
+        padding-top: calc(8px + env(safe-area-inset-top));
       }
       
       .logo-icon {
@@ -233,8 +239,8 @@
       }
       
       .welcome-container {
-        padding: 100px 15px 50px 15px;
-        margin-top: 45px;
+        padding: 80px 15px 50px 15px;
+        margin-top: calc(56px + env(safe-area-inset-top));
       }
       
       .hello-text {
@@ -253,7 +259,7 @@
       }
       
       .image-item {
-        height: 300px;
+        height: 240px;
       }
     }
 
