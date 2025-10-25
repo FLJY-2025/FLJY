@@ -139,6 +139,8 @@
       justify-content: flex-start;
       padding: 0 100px;
       gap: 24px;
+      max-width: 100%; /* 防溢出 */
+      overflow: hidden;
     }
 
     .image-item {
@@ -162,8 +164,10 @@
       .rect-7 {
         position: sticky;
         top: 0;
+        left: 0;
+        right: 0;
         z-index: 950; /* 高于欢迎文字(900)，低于导航(1000) */
-        width: 100%;
+        width: 100vw; /* 覆盖整个视口宽度，避免缩放露边 */
         min-height: 100vh;
         background: #ffffff;
       }
@@ -172,7 +176,10 @@
       .main-content {
         position: relative;
         z-index: 980; /* 高于白层，低于导航 */
-        background: transparent;
+        background: #ffffff; /* 主内容统一白色背景，避免缩放露出底色 */
+        width: 100%;
+        min-height: 100vh; /* 保证至少铺满视口高度 */
+        overflow-x: hidden; /* 防溢出 */
       }
  
       /* 页脚样式 */
