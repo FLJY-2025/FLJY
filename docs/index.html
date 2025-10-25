@@ -22,6 +22,13 @@
       font-family: Arial, sans-serif;
       background-color: rgba(255, 107, 53, 1); /* 全局背景采用矩形6的颜色 */
       color: #000000;
+      overflow-x: hidden; /* 禁止横向滚动 */
+      overscroll-behavior-x: none; /* 避免横向回弹 */
+      touch-action: pan-y; /* 仅允许纵向滑动 */
+    }
+
+    html {
+      overflow-x: hidden; /* 根级也禁止横向滚动 */
     }
 
     /* 固定导航栏样式 */
@@ -449,6 +456,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+      // 禁用鼠标右键菜单
+      document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
       updateNavbarOnScroll();
       window.addEventListener('scroll', updateNavbarOnScroll, { passive: true });
       window.addEventListener('resize', updateNavbarOnScroll);
