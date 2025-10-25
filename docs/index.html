@@ -95,9 +95,12 @@
     .welcome-container {
       padding: 200px 100px 100px 100px;
       text-align: left;
-      position: sticky;
+      position: fixed;
       top: calc(100px + env(safe-area-inset-top)); /* 固定在导航下方 */
+      left: 0;
+      width: 100%;
       margin-top: 0; /* 避免滚动时位置变化 */
+      z-index: 900;
     }
 
     .hello-text {
@@ -139,10 +142,11 @@
 
     /* 矩形 6 */
      .rect-6 {
-       width: 100%;
-       height: 600px;
-       background: rgba(255, 107, 53, 1);
-     }
+        width: 100%;
+        height: 600px;
+        background: rgba(255, 107, 53, 1);
+        margin-bottom: 200px; /* 与下方图片间距为200 */
+      }
 
     /* 页脚样式 */
     .footer {
@@ -221,9 +225,12 @@
       
       .welcome-container {
         padding: 150px 50px 80px 50px;
-        position: sticky;
+        position: fixed;
         top: calc(100px + env(safe-area-inset-top));
+        left: 0;
+        width: 100%;
         margin-top: 0;
+        z-index: 900;
       }
       
       .hello-text {
@@ -269,10 +276,13 @@
       
       .welcome-container {
         padding: 100px 20px 60px 20px;
-        position: sticky;
+        position: fixed;
         top: calc(64px + env(safe-area-inset-top));
+        left: 0;
+        width: 100%;
         margin-top: 0;
         text-align: center;
+        z-index: 900;
       }
       
       .hello-text {
@@ -319,9 +329,12 @@
       
       .welcome-container {
         padding: 80px 15px 50px 15px;
-        position: sticky;
+        position: fixed;
         top: calc(56px + env(safe-area-inset-top));
+        left: 0;
+        width: 100%;
         margin-top: 0;
+        z-index: 900;
       }
       
       .hello-text {
