@@ -124,6 +124,8 @@
     }
 
     .images-container {
+      position: relative;
+      z-index: 980; /* 高于白层(950)，低于导航(1000) */
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -160,6 +162,8 @@
  
       /* 页脚样式 */
     .footer {
+      position: relative;
+      z-index: 980; /* 白层之上，导航之下 */
       width: 100%;
       padding: 20px 100px;
       padding-bottom: calc(20px + env(safe-area-inset-bottom));
