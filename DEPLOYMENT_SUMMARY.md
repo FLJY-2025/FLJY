@@ -54,6 +54,7 @@
 
 ### 1. 配置GitHub推送（必需）
 按照 `GITHUB_SETUP_INSTRUCTIONS.md` 文件中的说明：
+- 首先需要在GitHub上创建名为`FLJY`的仓库
 - 创建个人访问令牌
 - 配置Git凭证
 - 推送代码到GitHub仓库

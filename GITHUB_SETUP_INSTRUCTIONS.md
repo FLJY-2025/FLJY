@@ -1,5 +1,18 @@
 # GitHub 推送配置指南
 
+## 创建GitHub仓库
+
+由于远程仓库尚未创建，您需要先在GitHub上创建一个仓库：
+
+1. 登录您的GitHub账户 (https://github.com)
+   - 邮箱：327830972@qq.com
+   - 用户名：FLJY-2025
+2. 访问 https://github.com/new 创建新仓库
+3. 仓库名称设置为 `FLJY`
+4. 选择仓库为 Public（公开）
+5. 不要初始化 README 文件
+6. 点击 "Create repository"
+
 ## 创建个人访问令牌 (Personal Access Token)
 
 1. 登录您的GitHub账户 (https://github.com)
