@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>峰岚佳韵</title>
   <link rel="stylesheet" href="css/font.css">
+  <link rel="icon" type="image/svg+xml" href="./网页图标.svg">
+   <link rel="icon" type="image/png" href="./网页图标.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="./180X180.png">
+   <link rel="mask-icon" href="./网页图标.svg" color="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="./32X32.png">
+    <link rel="icon" type="image/png" sizes="18x18" href="./18X18.png">
   <style>
     * {
       box-sizing: border-box;
@@ -24,7 +30,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 60px;
+      height: 100px;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -33,19 +39,22 @@
       background-color: rgba(0, 0, 0, 0.9); /* 默认使用深色背景 */
       backdrop-filter: blur(10px);
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+      box-shadow: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     /* 浅色背景时使用彩色稿logo */
     .light-bg .navbar {
       background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     }
 
     /* 深色背景时使用反白稿logo */
     .dark-bg .navbar {
       background-color: rgba(0, 0, 0, 0.9);
-      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+      box-shadow: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     
@@ -85,7 +94,7 @@
     .welcome-container {
       padding: 200px 100px 100px 100px;
       text-align: left;
-      margin-top: 60px; /* 为固定导航栏留出空间 */
+      margin-top: 100px; /* 为固定导航栏留出空间 */
     }
 
     .hello-text {
@@ -133,7 +142,7 @@
       
       .welcome-container {
         padding: 150px 50px 80px 50px;
-        margin-top: 60px;
+        margin-top: 100px;
       }
       
       .hello-text {
