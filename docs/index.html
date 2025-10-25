@@ -95,7 +95,9 @@
     .welcome-container {
       padding: 200px 100px 100px 100px;
       text-align: left;
-      margin-top: calc(100px + env(safe-area-inset-top)); /* 为固定导航栏留出空间 */
+      position: sticky;
+      top: calc(100px + env(safe-area-inset-top)); /* 固定在导航下方 */
+      margin-top: 0; /* 避免滚动时位置变化 */
     }
 
     .hello-text {
@@ -219,7 +221,9 @@
       
       .welcome-container {
         padding: 150px 50px 80px 50px;
-        margin-top: 100px;
+        position: sticky;
+        top: calc(100px + env(safe-area-inset-top));
+        margin-top: 0;
       }
       
       .hello-text {
@@ -265,7 +269,9 @@
       
       .welcome-container {
         padding: 100px 20px 60px 20px;
-        margin-top: calc(64px + env(safe-area-inset-top));
+        position: sticky;
+        top: calc(64px + env(safe-area-inset-top));
+        margin-top: 0;
         text-align: center;
       }
       
@@ -313,7 +319,9 @@
       
       .welcome-container {
         padding: 80px 15px 50px 15px;
-        margin-top: calc(56px + env(safe-area-inset-top));
+        position: sticky;
+        top: calc(56px + env(safe-area-inset-top));
+        margin-top: 0;
       }
       
       .hello-text {
